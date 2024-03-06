@@ -73,3 +73,6 @@ additional reading and practicing. The requirements are simple:
 This assignment will give you <strong>15%</strong> of the total. <br />
 <em> Good luck! </em> <br />
 <em> NS </em>
+
+
+ -- Checking the github is working or not on my terminal macos 
