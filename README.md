@@ -76,3 +76,5 @@ This assignment will give you <strong>15%</strong> of the total. <br />
 
 
  -- Checking the github is working or not on my terminal macos 
+
+ -- After a long time, to starting the our CRUD application - this is everything working clear on github (checking)
