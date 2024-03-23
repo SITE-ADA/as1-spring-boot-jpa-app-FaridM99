@@ -3,10 +3,15 @@ package com.CrudTesting.CrudTesting.Controllers;
 import com.CrudTesting.CrudTesting.models.Product;
 import com.CrudTesting.CrudTesting.models.ProductDto;
 import com.CrudTesting.CrudTesting.services.ProductsRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -30,11 +35,30 @@ public class ProductsController {
     @GetMapping("/create")
     public String showCreatePage(Model model) {
         ProductDto productDto = new ProductDto();
-        model.addAttribute("products", productDto);
+        model.addAttribute("productDto", productDto);
         return "products/CreateProduct";
     }
 
+@PostMapping("/create")
+    public String createProduct (
+            @Valid @ModelAttribute ProductDto productDto,
+            BindingResult result
 
+) {
+
+        if (productDto.getImageFile().isEmpty()) {
+            result.addError(new FieldError("productDto", "imageFile", "The image file is required"));
+        }
+
+
+        if (result.hasErrors()) {
+
+            return "products/CreateProduct";
+
+        }
+
+        return "redirect:/products";
+    }
 
 
 
