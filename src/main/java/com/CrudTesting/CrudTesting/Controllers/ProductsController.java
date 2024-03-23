@@ -9,10 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
@@ -88,7 +85,33 @@ public class ProductsController {
 
         }
 
+        Product product = new Product();
+        product.setName(productDto.getName());
+        product.setBrand(productDto.getBrand());
+        product.setCategory(productDto.getCategory());
+        product.setPrice(productDto.getPrice());
+        product.setDescription(productDto.getDescription());
+        product.setCreatedAt(createdAt);
+        product.setImageFileName(storageFileName);
+
+
+        repo.save(product);
+
+
         return "redirect:/products";
     }
+
+
+    @GetMapping("/edit")
+    public String showEditPage(
+            Model model, @RequestParam int id
+    ) {
+
+
+
+        return "products/EditProduct";
+    }
+
+
 
 }
