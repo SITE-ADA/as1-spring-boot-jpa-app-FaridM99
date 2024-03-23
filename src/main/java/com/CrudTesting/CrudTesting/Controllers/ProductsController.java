@@ -108,6 +108,30 @@ public class ProductsController {
     ) {
 
 
+        try {
+
+            Product product = repo.findById(id).get();
+            model.addAttribute("product", product);
+
+            ProductDto productDto = new ProductDto();
+            productDto.setName(product.getName());
+            productDto.setBrand(product.getBrand());
+            productDto.setCategory(product.getCategory());
+            productDto.setPrice(product.getPrice());
+            productDto.setDescription(product.getDescription());
+            
+
+
+            model.addAttribute("productDto", productDto);
+
+
+        }
+
+        catch(Exception ex) {
+            System.out.println("Exception: " +ex.getMessage());
+            return "redirect:/products";
+        }
+
 
         return "products/EditProduct";
     }
