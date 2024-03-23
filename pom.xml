@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.3</version>
+		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.CrudApp</groupId>
-	<artifactId>CrudApp</artifactId>
+	<groupId>com.CrudTesting</groupId>
+	<artifactId>CrudTesting</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CrudApp</name>
-	<description>Crud Application - Assignement 1</description>
+	<name>CrudTesting</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -41,8 +41,8 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
