@@ -74,4 +74,7 @@ public class ProductDto {
     public void setImageFile(MultipartFile imageFile) {
         this.imageFile = imageFile;
     }
+
+
+
 }

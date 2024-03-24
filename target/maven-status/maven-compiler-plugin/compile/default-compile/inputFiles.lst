@@ -1,1 +1,5 @@
-/Users/farid/Desktop/CrudTesting/src/main/java/com/CrudTesting/CrudTesting/CrudTestingApplication.java
+/Users/farid/Desktop/as1-spring-boot-jpa-app-FaridM99/src/main/java/com/CrudTesting/CrudTesting/Controllers/ProductsController.java
+/Users/farid/Desktop/as1-spring-boot-jpa-app-FaridM99/src/main/java/com/CrudTesting/CrudTesting/services/ProductsRepository.java
+/Users/farid/Desktop/as1-spring-boot-jpa-app-FaridM99/src/main/java/com/CrudTesting/CrudTesting/models/ProductDto.java
+/Users/farid/Desktop/as1-spring-boot-jpa-app-FaridM99/src/main/java/com/CrudTesting/CrudTesting/CrudTestingApplication.java
+/Users/farid/Desktop/as1-spring-boot-jpa-app-FaridM99/src/main/java/com/CrudTesting/CrudTesting/models/Product.java

@@ -47,11 +47,12 @@ public class ProductsController {
     public String createProduct(
             @Valid @ModelAttribute ProductDto productDto,
             BindingResult result
-
     ) {
 
         if (productDto.getImageFile().isEmpty()) {
-            result.addError(new FieldError("productDto", "imageFile", "The image file is required"));
+            result.addError(new FieldError("productDto",
+                    "imageFile",
+                    "The image file is required"));
         }
 
 
